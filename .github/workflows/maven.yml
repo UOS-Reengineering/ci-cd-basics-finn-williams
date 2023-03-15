@@ -19,3 +19,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package
+
+
+  jobs:
+    example_matrix:
+      strategy:
+        matrix:
+          version: [11, 17]
+          os: [ubuntu-latest, macos-latest]
